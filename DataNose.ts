@@ -269,4 +269,4 @@ class DataNose {
 DataNose.SetUpdateInterval(30000);
 
 let DN = DataNose;
-export { DN };
+export { DataNose, DN };

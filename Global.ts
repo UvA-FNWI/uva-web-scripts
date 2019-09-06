@@ -164,3 +164,6 @@ Object.defineProperty(window, "uploadDialogBody", {
     get: () => Upload.uploadDialogBody,
     set: val => { Upload.uploadDialogBody = val; }
 });
+
+const Global = null;
+export { Global };

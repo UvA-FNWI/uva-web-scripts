@@ -68,3 +68,5 @@ navigator.browserSpecs = (function(){
 
 // When the browser is ready show a browser unsupported warning if necessary.
 jQuery(document).ready(BrowserWarning.WarnOldBrowser);
+
+export { BrowserWarning };

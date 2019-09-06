@@ -15,3 +15,6 @@ jQuery(document).on('keyup', '.searchField', function (e) {
 
     Content.content[$$(this).attr('id')] = $$(this).val();
 });
+
+const KeyUp = null;
+export { KeyUp };

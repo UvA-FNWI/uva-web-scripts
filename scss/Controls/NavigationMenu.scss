@@ -1,0 +1,86 @@
+/*SCOPED*/
+/*UvA.Web*/
+/*uva-web-navigationmenu*/
+
+.uva-web-navigationmenu{
+.navmenu {
+
+    a {
+        display: block;
+        font-size: 16px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border-top: 1px solid #ddd;
+        padding-left: 33px;
+        text-indent: -15px;
+        position: relative;
+        padding-right: 20px;
+    }
+
+    a:last-child {
+        border-bottom: 1px solid #ddd;
+    }
+
+    a.active {
+        font-weight: bold;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            background: #5aa0ff;
+            width: 7px;
+        }
+    }
+
+    .disabled {
+        color: #bbb;
+        &::before {
+            background: #777 !important;
+        }
+    }
+
+    .complete {
+        color: green;
+
+        > i, svg {
+            position: absolute;
+            right: 5px;
+            top: 13px;
+        }
+
+        &::before {
+            background: #38ba38 !important;
+        }
+    }
+}
+
+.tabs {
+    border-bottom: 1px solid #aaa;
+    max-width: 800px;
+    padding-left: 20px;
+
+    a {
+        margin-left: 2px;
+        margin-right: 2px;
+        display: inline-block;
+        padding: 10px 12px;
+        border: 1px solid transparent;
+        border-bottom: 1px solid #aaa;
+        position: relative;
+        top: 1px;
+    }
+
+    a:hover, a.active {
+        border: 1px solid #aaa;
+        color: #333;
+    }
+
+    a.active {
+        border-bottom: 1px solid white;
+    }
+}
+
+}

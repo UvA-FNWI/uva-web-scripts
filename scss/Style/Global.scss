@@ -1,0 +1,404 @@
+/*GLOBAL*/
+/*UvA.Web*/
+/**/
+@import "_Base";
+
+.small-margin-bottom {
+     margin-bottom: $small-space;
+}
+
+.small-margin-right {
+     margin-right: $small-space;
+}
+
+.onlyprint {
+    display: none;
+}
+
+div.plus {
+    color: #55de55;
+    margin-right: 6px;
+    overflow: visible;
+    height: 12px;
+    width: 12px;
+    position: relative;
+    top: 1px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    font-size: 12px;
+    display: inline-block;
+    font-family: $uifont;
+
+    > a {
+        color: #aaa;
+        font-size: 8px;
+        overflow: visible;
+        height: 10px;
+        position: relative;
+        top: -3px;
+        color: #666;
+        left: 3px;
+    }
+
+    &:hover > a {
+        color: #2eca2e;
+    }
+
+    &:hover {
+        background-color: #edffed;
+        border: 1px solid #91db91;
+    }
+}
+
+
+/* BEGIN migrate.less */
+
+.actionlist {
+    div {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 16px;
+    }
+
+    img {
+        width: 12px;
+        position: relative;
+        top: 1px;
+    }
+}
+
+table.nborder > tbody > tr > td {
+    border-bottom: none;
+}
+
+table.editor {
+    tr {
+        min-height: 30px;
+    }
+
+    td {
+        border-bottom: none;
+    }
+
+    td:first-child { 
+        text-align: right;
+    }
+
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+p {
+    max-width: 850px;
+}
+
+a.deleteLink {
+    color: #8b0000;
+    &:hover { color: #e80000; }
+}
+
+.form {
+    input[type=text], textarea {
+        width: 550px;
+    }
+}
+
+/* END migrate.less */
+
+/* BEGIN .ind */
+/* TODO: Can this be deleted or moved to scoped stylesheet. */
+
+.ind {
+    text-align: right;
+    position: relative;
+    padding-left: 12px;
+}
+
+.ind::before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0px;
+    bottom: 3px;
+    top: 3px;
+}
+
+.ind.red {
+    color: #c00;
+}
+
+.ind.red::before {
+    border-left: 4px solid #c00;
+}
+
+.ind.yellow {
+    color: rgb(209, 144, 0);
+}
+
+.ind.yellow::before {
+    border-left: 4px solid rgb(209, 144, 0);
+}
+
+.ind.green {
+    color: rgb(107, 165, 57);
+}
+
+.ind.green::before {
+    border-left: 4px solid rgb(107, 165, 57);
+}
+
+.ind.gray {
+    color: darkgray;
+}
+
+.ind.gray::before {
+    border-left: 4px solid darkgray;
+}
+
+.ind.blue {
+    color: blue;
+}
+
+.ind.blue::before {
+    border-left: 4px solid blue;
+}
+
+/* END .ind */
+
+/* BEGIN legacy.less */
+
+.box {
+    background-color: #ebebeb;
+    padding: 5px;
+    border: solid 1px #000000;
+}
+
+.smallheader {
+    color: #00008b;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* END legacy.less */
+
+/* BEGIN .scroll-spy */
+
+.scroll-spy-display {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.scroll-spy-active-left {
+    border-left: solid 5px $blue-colour;
+    padding-left: 7px;
+}
+
+.scroll-spy-active-right {
+    border-right: solid 5px $blue-colour;
+    padding-right: 7px;
+}
+
+/* END .scroll-spy */
+
+.popupbox {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    color: #ffffff;
+    position: absolute;
+    z-index: 15;
+    border: solid 1px #777777;
+    overflow: hidden;
+    line-height: 16px;
+    text-overflow: ellipsis;
+    max-width: 210px;
+    max-height: 400px;
+    opacity: 1 !important;
+}
+
+.popupboxs {
+    color: #000000;
+    background-color: #fffaf0;
+    position: absolute;
+    padding: 7px;
+    z-index: 15;
+    border: solid 1px #bbbbbb;
+    display: none;
+}
+
+.cm {
+    background-color: #ffffff;
+    position: absolute;
+    padding: 4px;
+    z-index: 150;
+    border: solid 2px #777777;
+    display: none;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.498039215686275);
+}
+
+.cmitem {
+    padding: 5px;
+}
+
+.r {
+    text-align: right;
+}
+
+.edit {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    border-bottom: solid 1px #C4C4C4;
+    background-color: inherit;
+    font-size: inherit;
+}
+
+table.nborder {
+    border: none;
+    box-shadow: none;
+}
+
+table[centerheader] th {
+    text-align: center;
+}
+
+table[nopadding] td, table[nopadding] th {
+    padding: 0px;
+}
+
+table[borders] td {
+    border: dotted 1px #dcdcdc;
+}
+
+table[noborders] > tbody > tr > td {
+    border: none;
+}
+
+table.nborder > tbody > tr > td {
+    padding: 0px $small-space 0px 0px;
+}
+
+div.mce-content-body p:first-child {
+    margin-top: 0px;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+.dialog {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    text-align: left;
+    width: 310px;
+    border: solid 2px #777777;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.498039215686275);
+	display: flex;
+	flex: 1 1 auto;
+	flex-direction: column;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.490196078431373);
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    z-index: $overlay-z-index;
+}
+
+.dialogHeader {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+table.tableView {
+    .table-move-row {
+        color: #5aa0ff;
+        font-size: 15px;
+    }
+
+    .table-move-placeholder td {
+        border-top: 2px solid #a5c5fc;
+        border-bottom: 2px solid #a5c5fc;
+    }
+
+    .table-move-placeholder td:first-child {
+        border-left: 2px solid #a5c5fc;
+    }
+
+    .table-move-placeholder td:last-child {
+        border-right: 2px solid #a5c5fc;
+    }
+}
+
+﻿.infotable {
+    font-size: 16px;
+    border: none;
+    box-shadow: none;
+
+    td {
+        padding: 4px 15px;
+        border-bottom: none;
+
+        &:first-child {
+            text-align: right;
+            vertical-align: top;
+            color: rgb(155, 155, 155);
+            border-right: 1px solid rgb(200, 200, 200);
+        }
+    }
+}
+
+input[type="file"] {
+    visibility: hidden;
+}
+
+.floatThead-container {
+    z-index: ($overlay-z-index - 1) !important;
+}
+
+
+/* Keep font-face definitions here, caused an error when at top of file. */
+
+/* latin */
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 200;
+    src: local('Source Sans Pro ExtraLight'), local('SourceSansPro-ExtraLight'), url(sourcesanspro-200-latin.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin */
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(sourcesanspro-400-latin.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin */
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Source Sans Pro SemiBold'), local('SourceSansPro-SemiBold'), url(sourcesanspro-600-latin.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin */
+@font-face {
+    font-family: 'Source Serif Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Source Serif Pro'), local('SourceSerifPro-Regular'), url(sourceserifpro-400-latin.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}

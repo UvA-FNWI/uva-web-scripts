@@ -1,0 +1,9 @@
+/*SCOPED*/
+/*UvA.Web*/
+/*uva-web-switch*/
+@import "_switchMixin";
+.uva-web-switch{
+
+@include switch-mixin;
+
+}

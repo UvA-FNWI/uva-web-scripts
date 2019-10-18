@@ -1,0 +1,68 @@
+/*SCOPED*/
+/*UvA.Web*/
+/*uva-web-dropdownelement*/
+@import "../Style/Base";
+.uva-web-dropdownelement{
+
+.dd-main {
+    background-color: white;
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+
+    > a {
+        border: 1px solid #bbb;
+        color: black;
+        display: inline-block;
+        font-size: 13px;
+        min-height: 19px;
+        position: relative;
+        padding-left: $small-space;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 7px;
+
+        > span > svg {
+            padding-left: $small-space;
+            transform: scale(0.85, 1.3);
+        }
+
+        &:hover {
+            background-color: #f5f5f5;
+            color: black;
+        }
+    }
+}
+
+%dd-box-shared {
+    background: white;
+    border: #bbb solid 1px;
+    left: 0;
+    margin-top: 1px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: $small-space;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: absolute;
+    top: 100%;
+    white-space: nowrap;
+    z-index: 99;
+}
+
+.dd-box {
+    @extend %dd-box-shared;
+}
+
+.dd-box-hidden {
+    @extend %dd-box-shared;
+    display: none !important;
+}
+
+.dd-up {
+    top: inherit;
+    bottom: 100%;
+    margin-bottom: 1px;
+}
+
+}

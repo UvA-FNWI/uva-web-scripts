@@ -1,0 +1,117 @@
+/*SCOPED*/
+/*UvA.Web*/
+/*uva-web-checklisttree*/
+
+.uva-web-checklisttree{
+$checklistborder: solid #bbb 2px;
+
+& {
+    list-style: none;
+    font-family: 'Source Sans Pro',sans-serif;
+}
+
+li {
+    display : flex;
+    flex-flow: row;
+    position : relative;
+
+}
+
+.checklisttree-item-circle {
+    margin-right : 15px;
+    text-align: center;
+
+    flex-shrink: 0;
+
+    font-size: 16px;
+
+    padding-top:5px;
+    width : 30px;
+    height : 25px;
+
+    border-radius : 50%;
+    z-index : 1;
+
+    // Not sure why this is not necessary when not using standalone
+    //> i {
+    //    position: relative;
+    //    top: 2px;
+    //}
+}
+
+.checklisttree-vertical-line {
+    position : absolute;
+    height : 100%;
+    border-left : $checklistborder;
+    top : 15px;
+    left : 14px;
+}
+
+// gray?
+ li.checklisttree-item-waiting {
+     .checklisttree-item-circle { background-color: #ddd; }
+     .checklisttree-title, .checklisttree-item-circle { color: #888; }
+ }
+
+
+li.checklisttree-item-accepted  { 
+    > .checklisttree-item-circle { background-color: #dff0d8; }
+    > div > .checklisttree-title, > .checklisttree-item-circle { color: #3c763d; }
+}
+
+// or blue?
+li.checklisttree-item-pending {
+    > .checklisttree-item-circle { background-color: #d9edf7; }
+    > div > .checklisttree-title, > .checklisttree-item-circle { color: #31708f; }
+}
+
+li.checklisttree-item-rejected {
+    > .checklisttree-item-circle { background-color: #f2dede; }
+    > div > .checklisttree-title, > .checklisttree-item-circle { color: #a94442; }
+}
+
+div.checklisttree-content {
+    padding-top: 2px;
+    padding-bottom:15px;
+    font-size: 14px;
+    clear: both;
+}
+
+div.checklisttree-date {
+    display: inline-block;
+    font-size: 14px;
+    color: #aaa;
+    margin-left: 20px;
+}
+
+.checklisttree-sublist {
+    margin:0;
+    padding:0;
+    margin-top: 13px;
+}
+
+div.checklisttree-title {
+    font-size:18px;
+    padding-top:0;
+}
+
+.checklisttree-sublist li {
+    .checklisttree-title { font-size:16px; }
+    .checklisttree-content { font-size:12px; }
+
+    &:first-child::before {
+        content: "";
+        position : absolute;
+        height : auto;
+        width: 50px;
+        border-top : $checklistborder;
+        top : 13px;
+        left : -30px;
+    }
+
+    &:last-child {
+        .checklisttree-content { padding-bottom: 0px; }
+    }
+}
+
+}

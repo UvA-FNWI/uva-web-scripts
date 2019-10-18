@@ -1,0 +1,29 @@
+/*SCOPED*/
+/*UvA.Web*/
+/*uva-web-multiselectcontrol*/
+@import "../Style/_Base";
+.uva-web-multiselectcontrol{
+
+.multi-select-control-select-all {
+    padding-right: $small-space;
+}
+
+.multi-select-control-text-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.multi-select-control-item-hyperlink {
+    color: inherit !important;
+    text-decoration: none;
+}
+
+.multi-select-control-item-label {
+    cursor: pointer;
+}
+
+.multi-select-control-item-checkbox {
+    cursor: pointer;
+}
+
+}

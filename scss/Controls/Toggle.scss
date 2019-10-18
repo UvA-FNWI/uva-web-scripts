@@ -1,0 +1,9 @@
+/*SCOPED*/
+/*UvA.Web*/
+/*uva-web-toggle*/
+@import "_switchMixin";
+.uva-web-toggle{
+
+@include switch-mixin;
+
+}

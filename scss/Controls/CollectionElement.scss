@@ -1,0 +1,31 @@
+/*SCOPED*/
+/*UvA.Web*/
+/*uva-web-collectionelement*/
+@mixin collection-element {
+    &.collectionElement {
+        display: inline-block;
+
+        a:hover {
+            color: #2a55ab;
+        }
+
+        a > span {
+            color: red;
+            visibility: hidden;
+        }
+
+        a:hover > span {
+            visibility: initial;
+        }
+
+        > div {
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+}
+.uva-web-collectionelement{
+
+@include collection-element;
+
+}

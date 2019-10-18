@@ -1,0 +1,82 @@
+/*SCOPED*/
+/*UvA.Web*/
+/*uva-web-stepper*/
+
+.uva-web-stepper{
+& {
+    display: inline-block;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    box-shadow: none;
+    text-align: center;
+    font-family: 'Source Serif Pro', serif;
+    font-size: 16px;
+}
+
+td {
+    padding: 0;
+    border: none;
+}
+
+tr:last-child > td > div {
+    position: relative;
+    margin-right: 45px;
+}
+
+td.dn-step {
+    padding-right: 45px;
+    text-align: center;
+    white-space: nowrap;
+    color: #afafaf;
+}
+
+td.dn-step.active {
+    color: #000;
+}
+
+td.dn-step:last-child {
+    padding-right: 0;
+}
+
+.dn-step-line-left {
+    height: 1px;
+    border-bottom: 1px solid #afafaf;
+    position: absolute;
+    bottom: 9px;
+    left: -45px;
+    right: 50%;
+}
+
+.dn-step-line-left.active {
+    border-bottom: 1px solid #95989A;
+}
+
+.dn-step-line-right {
+    height: 1px;
+    border-bottom: 1px solid #afafaf;
+    position: absolute;
+    bottom: 9px;
+    left: 50%;
+    right: -45px;
+}
+
+.dn-step-line-right.active {
+    border-bottom: 1px solid #95989A;
+}
+
+.dn-step-dot {
+    position: relative;
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background: #fff;
+    border-radius: 50%;
+    border: 1px solid #95989A;
+}
+
+.dn-step-dot.active {
+    background: #95989A;
+}
+
+}

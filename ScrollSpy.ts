@@ -1,4 +1,4 @@
-﻿class ScrollSpy {
+class ScrollSpy {
     // Show active blue on left/right.
     static activeLeft: boolean = true
 

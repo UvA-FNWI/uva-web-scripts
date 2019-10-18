@@ -15,6 +15,7 @@ import { CourseManualDisplaySection } from './CourseManualDisplaySection';
 import { DN } from './DataNose';
 import { DropDown } from './Dropdown';
 import { Editor } from './Editor';
+import { Grid } from './Grid';
 import { Language } from './Language';
 import { Loading } from './Loading';
 import { Location } from './Location';
@@ -46,6 +47,7 @@ window.GetDate = Util.GetDate;
 window.GetName = Location.GetName;
 window.GetMaxZIndex = ZIndex.GetMaxZIndex;
 window.GetSelectedItems = Util.GetSelectedItems;
+window.Grid = Grid;
 window.InitMCE = Editor.InitMCE;
 window.PositionAtMouse = Position.PositionAtMouse;
 window.PositionRelative = Position.PositionRelative;
@@ -165,5 +167,8 @@ Object.defineProperty(window, "uploadDialogBody", {
     set: val => { Upload.uploadDialogBody = val; }
 });
 
+// The reason that we export null, is so that when building
+// uva-web-scripts/scss/UvA.scss we have something to import. This ensures
+// that the code in this file is executed when importing.
 const Global = null;
 export { Global };

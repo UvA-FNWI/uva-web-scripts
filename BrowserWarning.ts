@@ -3,7 +3,7 @@ import { Language } from './Language';
 class BrowserWarning {
 
     // Warning text for an IE browser of given version.
-    static IEWarningText (version: number): string {
+    static IEWarningText(version: number): string {
         var warning = "";
         if (Language.isEnglish()) {
             if (version === 11) {
@@ -44,7 +44,6 @@ class BrowserWarning {
             }, 100);
         }
     }
-
 }
 
 // Determine browser name and version and attach to navigator.browserSpecs.

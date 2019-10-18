@@ -1,12 +1,13 @@
-export { Global } from './Global';
 export { BrowserWarning } from './BrowserWarning';
 export { Click } from './Click';
 export { Confirm } from './Confirm';
 export { Content } from './Content';
 export { CourseManualDisplaySection } from './CourseManualDisplaySection';
 export { DataNose } from './DataNose';
-export { DropDown } from './Dropdown';
+export { Dropdown } from './Dropdown';
 export { Editor } from './Editor';
+export { Global } from './Global';
+export { Grid } from './Grid';
 export { KeyUp } from './KeyUp';
 export { Language } from './Language';
 export { Loading } from './Loading';

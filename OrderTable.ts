@@ -1,4 +1,4 @@
-﻿// NO TRANSFORM
+// NO TRANSFORM
 
 class OrderTable {
     static orderableTableEvents = {};

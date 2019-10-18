@@ -1,4 +1,4 @@
-﻿// NO TRANSFORM
+// NO TRANSFORM
 
 class SearchBox {
     constructor(id: string) {

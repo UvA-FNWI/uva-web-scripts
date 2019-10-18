@@ -1,4 +1,4 @@
-﻿// NO TRANSFORM
+// NO TRANSFORM
 
 class Editor {
     static forceMCEReInit: boolean = false

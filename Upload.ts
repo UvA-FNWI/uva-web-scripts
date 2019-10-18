@@ -1,4 +1,4 @@
-﻿// NO TRANSFORM
+// NO TRANSFORM
 
 import { DN } from './DataNose';
 import { Language } from './Language';

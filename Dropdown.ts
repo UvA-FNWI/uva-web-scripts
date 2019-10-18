@@ -52,4 +52,5 @@ class DropDown {
     } 
 };
 
-export { DropDown };
+const Dropdown = DropDown;
+export { Dropdown };

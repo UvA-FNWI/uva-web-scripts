@@ -1,5 +1,11 @@
 // NO TRANSFORM
 
+console.log('The DataNose team are looking for students who are interested in helping'
++ ' develop and configure features in DataNose, depending on your skills and experience.'
++ ' Hours and schedule to be determined, usually one or two days per week. If you'
++ ' are interested please send me an email outlining your motivation and with CV'
++ ' attached to g.oomens@uva.nl - Gerrit Oomens');
+
 class Util {
 
     // Return a jQuery element by given UvA.Web ID.

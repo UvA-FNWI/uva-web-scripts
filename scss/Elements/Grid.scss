@@ -4,24 +4,22 @@
 
 .uva-web-grid{
 & {
-  border: 1px solid #E3E4E4;
-  border-left: none;
   display: grid;
   overflow-y: auto;
   width: 100%;
 }
 
 .header {
-  background-color: #F9F9FA;
-  border-left: 1px solid #E3E4E4;
+  background-color: white;
   border-bottom: 1px solid #E3E4E4;
+  display: flex;
   padding: 5px;
   position: sticky;
   top: 0;
 }
 
 .cell {
-  border-left: 1px solid #E3E4E4;
+  border-bottom: 1px solid #E3E4E4;
   padding: 2px 5px;
 }
 

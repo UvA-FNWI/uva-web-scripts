@@ -1,4 +1,4 @@
-﻿// NO TRANSFORM
+// NO TRANSFORM
 
 import { Confirm } from './Confirm';
 import { Content } from './Content';

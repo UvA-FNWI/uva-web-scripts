@@ -22,6 +22,7 @@ interface Window {
     ScrollSpy,
     SetUpdateInterval,
     StudentOverviewSection_timelineId,
+    Grid,
     UpdateColumn,
     Util,
     WhenElementAvailable,

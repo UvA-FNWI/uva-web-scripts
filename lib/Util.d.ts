@@ -1,3 +1,4 @@
+/// <reference types="jquery" />
 declare class Util {
     static j(dnId: number): JQuery<HTMLElement>;
     static GetDate(id: any): string;

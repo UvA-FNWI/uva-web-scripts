@@ -1,3 +1,4 @@
+/// <reference types="jquery" />
 declare class Click {
     static onClickHandlers: ((e: JQuery.ClickEvent) => void)[];
     static performClick(elem: Element): void;

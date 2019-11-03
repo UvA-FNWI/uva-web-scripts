@@ -16,7 +16,7 @@ class ZIndex {
             if (this == null) return;
 
             const zIndexVal = jQuery(this).css('zIndex');
-            const index_current = parseInt(!isNaN(zIndexVal) ? zIndexVal : '0', 10);
+            const index_current = parseInt(!isNaN(zIndexVal as any) ? zIndexVal : '0', 10);
 
             if (index_current > index_highest)
                 index_highest = index_current;

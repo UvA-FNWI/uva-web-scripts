@@ -29,7 +29,7 @@ class DataNose {
     // par: the object to POST.
     // async: perform an asynchronous request.
     // overridePageName: inform the server we are on the given page.
-    static Execute(t, par, async, overridePageName) {
+    static Execute(t, par?, async?, overridePageName?) {
         async = typeof async !== 'undefined' ? async : true;
         overridePageName = typeof overridePageName !== 'undefined' ? overridePageName : true;
 
@@ -65,7 +65,7 @@ class DataNose {
     // params: additional parameters for the object sent to the server.
     // async: perform an asynchronous request.
     // waitOnConfirmation: wait on user confirmation before executing the event.
-    static Event(id, name, params, async, confirmationId, handlerName) {
+    static Event(id, name, params, async?, confirmationId?, handlerName?) {
         async = typeof async !== 'undefined' ? async : true;
 
         var newParams = Object.create(params);
@@ -83,7 +83,7 @@ class DataNose {
             newParams['_ep_' + param] = params[param];  //encodeURIComponent
 
         var execute = () => DataNose.Execute("event", newParams, async);
-        if (confirmationId)
+        if (confirmationId && handlerName)
             Confirm.addHandlerWaitingOnConfirmation(confirmationId, handlerName, execute);
         else
             execute();

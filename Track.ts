@@ -34,10 +34,6 @@ class Track {
 
 // On mouse move update the position of the mouse.
 jQuery(document).mousemove(e => {
-    if (!e) {
-        // warn('document mousemove event was null or undefined');
-        e = window.event;
-    }
     const y =
         e.pageX
         ? (e.pageY)

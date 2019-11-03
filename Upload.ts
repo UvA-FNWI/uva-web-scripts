@@ -208,7 +208,7 @@ class Upload {
 
     static finishedUpload(id) {
         Upload.closeUploadDialog();
-        var iframe = document.getElementsByName('hidden-target-' + id)[0];
+        var iframe = document.getElementsByName('hidden-target-' + id)[0] as HTMLIFrameElement;
         var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
         if (iframeDocument.body.innerText) {
             var result = JSON.parse(iframeDocument.body.innerText);

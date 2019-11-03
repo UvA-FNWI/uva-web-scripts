@@ -1,5 +1,7 @@
 // NO TRANSFORM
 
+import { DN } from './DataNose';
+
 class OrderTable {
     static orderableTableEvents = {};
 
@@ -32,12 +34,13 @@ class OrderTable {
         placeHolder.className = 'table-move-placeholder';
 
         for (var i = 0; i < movers.length; ++i) {
+            var currentMover = movers[i] as HTMLElement;
             if (i < lockedRowCount) {
-                movers[i].style.display = 'none';
+                currentMover.style.display = 'none';
                 continue;
             }
             // Note(Mussi): capturing i here, assuming this method is called again on order change so index changes don't matter
-            movers[i].onmousedown = (function (mover, i) {
+            currentMover.onmousedown = (function (mover, i) {
                 return function (event) {
                     if (event.button !== 0) { return; }
 
@@ -72,7 +75,7 @@ class OrderTable {
                     row.insertAdjacentElement('beforebegin', placeHolder);
 
                     for (var k = 0; k < row.childNodes.length; ++k) {
-                        var td = row.childNodes[k];
+                        var td = row.childNodes[k] as HTMLElement;
                         var column = document.createElement('div');
                         column.style.display = 'inline-block';
                         column.style.width = td.clientWidth + 'px';

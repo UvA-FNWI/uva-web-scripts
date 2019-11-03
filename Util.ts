@@ -32,7 +32,7 @@ class Util {
         for (let i = 0; i < parts.length; ++i) {
             if (el.classList)
                 el.classList.add(parts[i]);
-            else if (!hasClass(el, parts[i]))
+            else if (!el.hasClass(parts[i]))
                 el.className += ` ${parts[i]}`;
         }
         return el;
@@ -56,16 +56,18 @@ class Util {
     }
 };
 
-jQuery.fn.equals = function (compareTo) {
-    if (!compareTo || this.length != compareTo.length) {
-        return false;
-    }
-    for (let i = 0; i < this.length; ++i) {
-        if (this[i] !== compareTo[i]) {
+jQuery.fn.extend({
+    equals: function (compareTo) {
+        if (!compareTo || this.length != compareTo.length) {
             return false;
         }
-    }
-    return true;
-};
+        for (let i = 0; i < this.length; ++i) {
+            if (this[i] !== compareTo[i]) {
+                return false;
+            }
+        }
+        return true;
+    } 
+});
 
 export { Util };

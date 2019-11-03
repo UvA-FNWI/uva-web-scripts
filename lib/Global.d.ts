@@ -1,2 +1,4 @@
-declare const Global: any;
+declare class Global {
+    constructor();
+}
 export { Global };

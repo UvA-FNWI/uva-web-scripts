@@ -18,7 +18,7 @@ class Location {
         let name = window.location.hash;
         if (name == '') name = '#';
         const brIndex = name.indexOf('(');
-        if (brIndex != '-1') name = name.substring(0, brIndex);
+        if (brIndex != -1) name = name.substring(0, brIndex);
         return name;
     }
 

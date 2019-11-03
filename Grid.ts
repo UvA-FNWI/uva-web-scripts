@@ -60,7 +60,7 @@ class Grid {
 
     // Hide all floating headers except the one given.
     static HideFloatingHeaders(except: string) {
-        const ids = Array.from(Object.keys(Grid.FloatingHeaderHidden));
+        const ids: Array<string> = Object.keys(Grid.FloatingHeaderHidden) as Array<string>;
         for (var i = 0; i < ids.length; i ++) {
             if (ids[i] != except) {
                 const floatingHeader = document.getElementById(ids[i]);

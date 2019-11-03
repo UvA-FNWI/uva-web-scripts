@@ -2,8 +2,8 @@ declare class DataNose {
     static activeRequest: boolean;
     static intID: number;
     static SetUpdateInterval(duration: any): void;
-    static Execute(t: any, par: any, async: any, overridePageName: any): void;
-    static Event(id: any, name: any, params: any, async: any, confirmationId: any, handlerName: any): void;
+    static Execute(t: any, par?: any, async?: any, overridePageName?: any): void;
+    static Event(id: any, name: any, params: any, async?: any, confirmationId?: any, handlerName?: any): void;
     static AskForConfirmation(id: any, confirmationText: any, confirmationId: any): void;
     static MouseDownEvent(id: any, event: any, targets: any, async: any, confirmationId: any): void;
     static MouseUpEvent(id: any, event: any, targets: any, async: any, confirmationId: any): void;

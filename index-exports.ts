@@ -27,3 +27,9 @@ export { Track } from './Track';
 export { Upload } from './Upload';
 export { Util } from './Util';
 export { ZIndex } from './ZIndex';
+// This is just to define a 'register' function on the UvA
+// object (available as window.UvA) created by 'index.ts';
+// We need to define the type here, even if nothing occurs,
+// so we can overwrite it in 'index.ts'
+function register(a: any, b: any) {};
+export { register };

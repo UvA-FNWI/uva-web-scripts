@@ -4,26 +4,131 @@
 
 .uva-web-grid{
 & {
-  display: grid;
-  overflow-y: auto;
-  width: 100%;
+    overflow: auto;
+    overflow-y: auto;
+
+    &.gridView > * {
+        overflow: auto;
+        display: contents;
+    }
+
+    &.to-remove {
+        display: none;
+        position: fixed;
+        top: 0;
+        width: inherit;
+        overflow-x: hidden;
+    }
+}
+
+.gridView {
+    display: -ms-grid;
+    display: grid;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.col-last {
+    vertical-align: top;
+
+    & > a {
+        padding-left: 2px;
+        padding-top: 1px;
+    }
 }
 
 .header {
-  background-color: white;
-  border-bottom: 1px solid #E3E4E4;
-  display: flex;
-  padding: 5px;
-  position: sticky;
-  top: 0;
+    background-color: white;
+    border-bottom: 1px solid #E3E4E4;
+    display: contents;
+    padding: 5px;
+    position: sticky;
+    font-weight: bold;
+    border-bottom: solid 2px black;
+    top: 0;
+
+    /* New */
+    vertical-align: top;
+    text-align: left;
+    font: bold;
+    padding: 0;
+}
+
+.floating-header {
+    background-color: white;
+    padding: 5px 0;
+    font-weight: bold;
+    border-bottom: solid 1px #E3E4E4;
 }
 
 .cell {
-  border-bottom: 1px solid #E3E4E4;
-  padding: 2px 5px;
+    border-bottom: 1px solid #E3E4E4;
+    display: block;
 }
 
 .odd {
-  background-color: #F9F9FA;
+    background-color: #F9F9FA;
+}
+
+.row {
+
+    &:nth-of-type(odd) > .cell {
+        background-color: #F9F9FA;
+    }
+
+    &.row-expandable {
+        vertical-align: bottom;
+    }
+
+    &.removable-row {
+        width: 90%;
+        margin-left: 15px;
+    }
+
+    display: contents;
+}
+
+.column-remove-img {
+    min-width: 12px;
+    top: 1px;
+    margin-right: 2px;
+}
+
+.column-remove-btn {
+    float: left;
+    margin-left: 5px;
+}
+
+.column-expandable {
+    width: 0;
+    margin: 0;
+    height: 0;
+}
+
+.expand-toggle {
+    float: right;
+    cursor: pointer;
+    padding-right: 8px;
+}
+
+.cell-expandable {
+    & > div {
+        padding: 8px;
+        border-width: 0 1px 0 1px;
+        border-color: #E3E4E4;
+        border-style: solid;
+        line-break: auto;
+        height: calc(100% - 20px);
+
+        & > * {
+            all: unset;
+        }
+    }
+
+    overflow-wrap: break-word;
+    word-break: break-word;
+    overflow-y: unset;
 }
 }

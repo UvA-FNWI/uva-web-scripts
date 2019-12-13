@@ -5,7 +5,6 @@
 //   This declaration is so TypeScript doesn't complain when we type window.X
 //   with a 'X is not a property defined on window' error.
 interface Window {
-    $,
     $$,
     AutoCompleteEvent,
     Confirm,

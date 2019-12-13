@@ -129,16 +129,16 @@ class DataNose {
         if (!event)
             event = window.event;
 
-        var el = $('_' + id);
+        var el = document.getElementById('_' + id);
 
         var left = el.offsetLeft;
         var top = el.offsetTop;
-        var parent = el.offsetParent;
+        var parent = el.offsetParent as HTMLElement;
 
         while (parent != null) {
             top += parent.offsetTop;
             left += parent.offsetLeft;
-            parent = parent.offsetParent;
+            parent = parent.offsetParent as HTMLElement;
         }
 
         if (eventName == true)
@@ -160,7 +160,7 @@ class DataNose {
     static TargetEvent(id, name, params, targets, async, confirmationId, handlerName) {
         async = typeof async !== 'undefined' ? async : true;
         for (var i in targets) {
-            if (!$(targets[i].id))
+            if (!document.getElementById(targets[i].id))
                 continue;
             params[targets[i].id + '_'] = DataNose.GetValue(targets[i].id, targets[i].prop);
         }
@@ -172,7 +172,7 @@ class DataNose {
         if (prop.indexOf('Get') === 0)
             return eval(prop + '("' + id + '")');
         else
-            return $(id)[prop];
+            return document.getElementById(id)[prop];
     }
 
     static ChangeEvent(el, optionalParams) {

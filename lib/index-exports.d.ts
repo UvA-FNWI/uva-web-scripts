@@ -27,3 +27,5 @@ export { Track } from './Track';
 export { Upload } from './Upload';
 export { Util } from './Util';
 export { ZIndex } from './ZIndex';
+declare function register(a: any, b: any): void;
+export { register };

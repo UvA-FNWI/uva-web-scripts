@@ -61,8 +61,8 @@ class ScrollSpy {
             var currInView = false;
 
             for (var i = 0; i < ScrollSpy.scrollSpyIDs.length; ++i) {
-                var spyElement = $(ScrollSpy.scrollSpyIDs[i]);
-                var displayElement = $(ScrollSpy.scrollSpyDisplayIDs[i]);
+                var spyElement = document.getElementById(ScrollSpy.scrollSpyIDs[i]) as HTMLElement;
+                var displayElement = document.getElementById(ScrollSpy.scrollSpyDisplayIDs[i]);
                 if (spyElement == null || displayElement == null)
                     continue;
 
@@ -79,14 +79,14 @@ class ScrollSpy {
                     shortestDist = y;
                     nearest = displayElement;
                 } else if (prevInView && currInView)
-                    $$($(ScrollSpy.scrollSpyDisplayIDs[i - 1]))
+                    $$(document.getElementById(ScrollSpy.scrollSpyDisplayIDs[i - 1]))
                         .addClass(activeClass());
             }
             if (nearest !== null)
                 $$(nearest).addClass(activeClass());
 
             if ($$(window).scrollTop() + $$(window).height() >= $$(document).height() - 20) {
-                $$($(
+                $$(document.getElementById(
                     ScrollSpy.scrollSpyDisplayIDs[ScrollSpy.scrollSpyDisplayIDs.length - 1]
                 )).addClass(activeClass());
             }

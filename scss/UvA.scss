@@ -1,3 +1,6 @@
+@import "uva-web-scripts/scss/Style/Global";
+@import "uva-web-scripts/scss/Style/_base";
+@import "uva-web-scripts/scss/Elements/Grid";
 @import "uva-web-scripts/scss/Controls/CheckListTree";
 @import "uva-web-scripts/scss/Controls/CollectionElement";
 @import "uva-web-scripts/scss/Controls/DropDownElement";
@@ -8,6 +11,3 @@
 @import "uva-web-scripts/scss/Controls/Switch";
 @import "uva-web-scripts/scss/Controls/Toggle";
 @import "uva-web-scripts/scss/Controls/_switchMixin";
-@import "uva-web-scripts/scss/Elements/Grid";
-@import "uva-web-scripts/scss/Style/Global";
-@import "uva-web-scripts/scss/Style/_base";

@@ -24,7 +24,7 @@ class Popup {
         }
         // Hide all popups, except this one, and open it.
         $$('.popupbox').hide();
-        $$($(element[0].getAttribute('aria-describedby'))).show();
+        $$(document.getElementById(element[0].getAttribute('aria-describedby'))).show();
         element.tooltip('open');
     }
 };

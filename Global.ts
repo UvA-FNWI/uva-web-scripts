@@ -5,7 +5,6 @@
 // TODO: We should only export a single namespace per file, not export each
 // function individually. Then use derived functions to access these.
 
-window.$ = document.getElementById.bind(document);
 window.$$ = window.jQuery;
 
 import { Click } from './Click';

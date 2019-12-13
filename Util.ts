@@ -14,11 +14,14 @@ class Util {
     }
 
     static GetDate(id) {
-        return `${$(`${id}_month`).value},${$(`${id}_day`).value},${$(`${id}_year`).value}`;
+        let monthVal = (document.getElementById(`${id}_month`) as HTMLInputElement).value;
+        let dayVal = (document.getElementById(`${id}_day`) as HTMLInputElement).value;
+        let yearVal = (document.getElementById(`${id}_year`) as HTMLInputElement).value;
+        return `${monthVal},${dayVal},${yearVal}`;
     }
 
     static GetSelectedItems(id) {
-        const el = $(id);
+        const el = document.getElementById(id) as HTMLFormElement;
         let res = '';
         for (let i = 0; i < el.options.length; i++)
             res += el.options[i].selected ? (`${i},`) : '';

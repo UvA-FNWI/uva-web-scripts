@@ -13,7 +13,7 @@ class BrowserWarning {
             else {
                 warning += "Your browser is NOT supported. ";
             }
-            warning += " We suggest using Chrome, Edge, Firefox or Safari.";
+            warning += " We suggest using Chrome, Edge, Firefox.";
         }
         else {
             if (version === 11) {
@@ -28,6 +28,21 @@ class BrowserWarning {
         return warning;
     }
 
+    static SafariWarningText(version: number): string {
+        let warning = '';
+        if (Language.isEnglish()) {
+            warning += "Your browser is not well supported. ";
+            warning += " We suggest upgrading your browser to the latest version. ";
+            warning += " If you encounter any issues with login, please try with different browers.";
+        }
+        else {
+            warning += "Uw browser wordt niet goed ondersteund. ";
+            warning += " We raden u aan uw browser te upgraden naar de nieuwste versie. ";
+            warning += "Als u problemen ondervindt met inloggen, probeer een ander browser.";
+        }
+        return warning;
+    }
+
     static WarnOldBrowser() {
         // Show a warning only on IE.
         if (navigator.browserSpecs.name === "IE") {
@@ -38,6 +53,19 @@ class BrowserWarning {
                     clearInterval(intervalId);
                     $$('.unsupported-browser-dialog-text')[0]
                         .innerHTML = BrowserWarning.IEWarningText(
+                            parseInt(navigator.browserSpecs.version));
+                    dialogs.toggle();
+                }
+            }, 100);
+        }
+        // warining for safari, login issues
+        if (navigator.browserSpecs.name.toLowerCase() === "safari" && navigator.browserSpecs.version < 12) {
+            var intervalId = setInterval(function () {
+                var dialogs = $$('.unsupported-browser-dialog');
+                if (dialogs.length > 0) {
+                    clearInterval(intervalId);
+                    $$('.unsupported-browser-dialog-text')[0]
+                        .innerHTML = BrowserWarning.SafariWarningText(
                             parseInt(navigator.browserSpecs.version));
                     dialogs.toggle();
                 }

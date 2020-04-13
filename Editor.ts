@@ -1,9 +1,16 @@
 // NO TRANSFORM
 
+import { DN } from './DataNose';
+
+interface ExtraButton {
+    id: number
+    name: string,
+}
+
 class Editor {
     static forceMCEReInit: boolean = false
 
-    static InitMCE() {
+    static InitMCE(extraButtons: ExtraButton[]) {
         tinymce.EditorManager.editors = [];
         tinymce.init({
             selector: 'div[addtinyMCE="true"]',
@@ -12,7 +19,7 @@ class Editor {
                 'autolink lists link',
                 'table',
                 'paste',
-                'wordcount'
+                'wordcount',
             ],
             menubar: false,
             relative_urls: false,
@@ -31,7 +38,7 @@ class Editor {
             },
             browser_spellcheck: true,
             default_link_target: "_blank",
-            toolbar: 'bold italic underline striketrough | bullist numlist | table | link',
+            toolbar: "bold italic underline striketrough | bullist numlist | table | link",
             setup: function (ed) {
                 var element = $$('#' + ed.id);
                 ed.on('change', function (e) {
@@ -44,6 +51,16 @@ class Editor {
                 if (element.attr('tinyMCEautoresize')) { ed.settings.plugins.push('autoresize'); }
                 if (element.attr('maketinyMCEreadonly') == 'true') { ed.settings.readonly = true; }
 
+                if (extraButtons) {
+                    for (let button of extraButtons) {
+                        ed.ui.registry.addButton(`eb_${button.id}`, {
+                            text: button.name,
+                            onAction: function (_) {
+                                DN.Event(ed.id.substr(1), 'ButtonClick', { buttonId: button.id });
+                            }
+                        });
+                    }
+                }
             }
         });
     }

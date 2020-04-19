@@ -8,6 +8,7 @@ export { Dropdown } from './Dropdown';
 export { Editor } from './Editor';
 export { Global } from './Global';
 export { Grid } from './Grid';
+export { HotReload } from './HotReload';
 export { KeyUp } from './KeyUp';
 export { Language } from './Language';
 export { Loading } from './Loading';

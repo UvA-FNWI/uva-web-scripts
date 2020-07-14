@@ -11,7 +11,7 @@ class Editor {
     static forceMCEReInit: boolean = false
 
     static InitMCE(extraButtons: ExtraButton[]) {
-        tinymce.EditorManager.editors = [];
+        tinymce.remove('div[addtinyMCE="true"]');
         tinymce.init({
             selector: 'div[addtinyMCE="true"]',
             inline: true,
